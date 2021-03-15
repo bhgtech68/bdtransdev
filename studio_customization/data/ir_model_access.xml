@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.bang_theo_doi_group__a2f80fa8-4379-4317-b2d9-27378c3deb94" model="ir.model.access" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="group_id" ref="base.group_user"/>
+    <field name="model_id" ref="studio_customization.bang_theo_doi_a932c34d-76b4-43a5-ad35-70ab73794fb7"/>
+    <field name="name">Bảng theo dõi group_user</field>
+    <field name="perm_create" eval="True"/>
+    <field name="perm_read" eval="True"/>
+    <field name="perm_unlink" eval="False"/>
+    <field name="perm_write" eval="True"/>
+  </record>
+  <record id="studio_customization.bang_theo_doi_group__e5458a27-2119-4556-af34-5d4e8d06e4ab" model="ir.model.access" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="group_id" ref="base.group_system"/>
+    <field name="model_id" ref="studio_customization.bang_theo_doi_a932c34d-76b4-43a5-ad35-70ab73794fb7"/>
+    <field name="name">Bảng theo dõi group_system</field>
+    <field name="perm_create" eval="True"/>
+    <field name="perm_read" eval="True"/>
+    <field name="perm_unlink" eval="True"/>
+    <field name="perm_write" eval="True"/>
+  </record>
+</odoo>

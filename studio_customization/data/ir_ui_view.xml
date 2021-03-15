@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.default_form_view_fo_52d4c184-432a-46bd-8e44-d5fe0f1d52a5" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <form>
+        <header/>
+        <sheet string="Bảng theo dõi">
+          <div class="oe_title">
+            <h1>
+              <field name="x_name" required="1" placeholder="Name..."/>
+            </h1>
+          </div>
+          <group name="studio_group_7b4b0d">
+            <group name="studio_group_7b4b0d_left"/>
+            <group name="studio_group_7b4b0d_right"/>
+          </group>
+        </sheet>
+        <div class="oe_chatter" name="oe_chatter">
+          <field name="message_follower_ids"/>
+          <field name="message_ids"/>
+          <field name="activity_ids"/>
+        </div>
+      </form>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_bang_theo_doi</field>
+    <field name="name">Default form view for x_bang_theo_doi</field>
+    <field name="priority">16</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.default_list_view_fo_3d847aa6-bf8d-4189-a073-fcd0a19d6fa1" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="x_studio_sequence" widget="handle"/>
+        <field name="x_name"/>
+      </tree>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_bang_theo_doi</field>
+    <field name="name">Default list view for x_bang_theo_doi</field>
+    <field name="priority">16</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.default_search_view__5faeeddb-d1e6-4a4e-9d01-ee4c3665370b" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <search>
+        <field name="x_name"/>
+      </search>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_bang_theo_doi</field>
+    <field name="name">Default search view for x_bang_theo_doi</field>
+    <field name="priority">16</field>
+    <field name="type">search</field>
+  </record>
+  <record id="studio_customization.odoo_studio_default__696a72a5-bcd1-45d0-be48-437841ead2c8" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='x_name']" position="attributes">
+          <attribute name="string">Mã</attribute>
+        </xpath>
+        <xpath expr="//field[@name='x_name']" position="after">
+          <field name="x_studio_ngy"/>
+          <field name="x_studio_cont_no"/>
+          <field name="x_studio_khch_hng"/>
+          <field name="x_studio_cont_20"/>
+          <field name="x_studio_cont_40"/>
+          <field name="x_studio_hng_tu"/>
+          <field name="x_studio_ni_ly"/>
+          <field name="x_studio_ni_h"/>
+          <field name="x_studio_gi_cut_off"/>
+          <field name="x_studio_ngi_ly"/>
+          <field name="x_studio_ngi_h"/>
+          <field name="x_studio_ngi_h_tr"/>
+          <field name="x_studio_loi_hnh"/>
+          <field name="x_studio_chi_ph" sum="Sum of Chi phí"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="studio_customization.default_list_view_fo_3d847aa6-bf8d-4189-a073-fcd0a19d6fa1"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">x_bang_theo_doi</field>
+    <field name="name">Odoo Studio: Default list view for x_bang_theo_doi customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_default__ae364951-a84e-454b-9652-4d002a3a3887" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='x_name']" position="attributes">
+          <attribute name="attrs">{}</attribute>
+          <attribute name="force_save">True</attribute>
+          <attribute name="required"/>
+          <attribute name="readonly">1</attribute>
+        </xpath>
+        <xpath expr="//group[@name='studio_group_7b4b0d_left']" position="inside">
+          <field name="x_studio_ngy" string="Ngày"/>
+          <field name="x_studio_cont_no" string="Cont No."/>
+          <field name="x_studio_khch_hng" string="Khách hàng" options="{&quot;no_create&quot;:true,&quot;no_open&quot;:true}" domain="[[&quot;x_studio_l_cng_ty&quot;,&quot;=&quot;,True]]"/>
+          <field name="x_studio_cont_20" string="Cont 20"/>
+          <field name="x_studio_cont_40" string="Cont 40"/>
+          <field name="x_studio_hng_tu" string="Hãng tàu"/>
+          <field name="x_studio_ni_ly" string="Nơi lấy"/>
+          <field name="x_studio_ni_h" string="Nơi hạ"/>
+        </xpath>
+        <xpath expr="//group[@name='studio_group_7b4b0d_right']" position="inside">
+          <field name="x_studio_gi_cut_off" string="Giờ cut off"/>
+          <field name="x_studio_ngi_ly" string="Người lấy" domain="[[&quot;x_studio_l_ti_x&quot;,&quot;=&quot;,True]]"/>
+          <field name="x_studio_ngi_h" string="Người hạ" domain="[[&quot;x_studio_l_ti_x&quot;,&quot;=&quot;,True]]"/>
+          <field name="x_studio_ngi_h_tr" string="Người hỗ trợ" domain="[[&quot;x_studio_l_ti_x&quot;,&quot;=&quot;,True]]"/>
+          <field name="x_studio_loi_hnh" string="Loại hình"/>
+          <field name="x_studio_ghi_ch" string="Ghi chú"/>
+          <field name="x_studio_chi_ph" string="Chi phí"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="studio_customization.default_form_view_fo_52d4c184-432a-46bd-8e44-d5fe0f1d52a5"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">x_bang_theo_doi</field>
+    <field name="name">Odoo Studio: Default form view for x_bang_theo_doi customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_res_part_ab02466a-66c7-4003-b2d7-ae7106b65cbd" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='vat']" position="after">
+          <field name="x_studio_l_cng_ty" string="Là Khách hàng"/>
+          <field name="x_studio_l_ti_x" string="Là Tài xế"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">res.partner</field>
+    <field name="name">Odoo Studio: res.partner.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+</odoo>

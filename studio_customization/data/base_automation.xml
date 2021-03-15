@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.bang_theo_doi_seq_d86fdbfc-90c4-4191-8acc-dbff8244963e" model="base.automation" context="{'studio': True}">
+    <field name="action_server_id" ref="studio_customization.bang_theo_doi_seq_08cc3e72-9c92-44dc-a261-611b86e310fa"/>
+    <field name="active" eval="True"/>
+    <field name="filter_domain" eval="False"/>
+    <field name="filter_pre_domain" eval="False"/>
+    <field name="last_run" eval="False"/>
+    <field name="on_change_field_ids" eval="[(6, 0, [])]"/>
+    <field name="trg_date_id" eval="False"/>
+    <field name="trg_date_range" eval="False"/>
+    <field name="trg_date_range_type" eval="False"/>
+    <field name="trigger">on_create</field>
+  </record>
+</odoo>
